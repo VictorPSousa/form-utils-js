@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>JQuery Mask Plugin - Será que vai?</title>
+		<script type="text/javascript" src="mdb/js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="mdb/javascript/dist/jquery.mask.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function (){
+				$("#tel").mask("(00) 0000-00009")
+				$("#tel").blur(function(event){
+					if($(this).val().lenght == 15){
+						$("#tel").mask("(00) 00000-0009")
+					}else{
+						$("#tel").mask("(00) 0000-00009")
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<h1>Formulário de Teste</h1>
+		<form name="formulario" method="post">
+			Telefone/Celular<input name="tel" id="tel" class="tel" type="tel"/>
+		</form>
+	</body>
+</html>
